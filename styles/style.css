@@ -1,0 +1,60 @@
+* {
+    background-color: rgb(97, 97, 97);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    background-color: aliceblue;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.container-max {
+    background-color: aliceblue;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.block {
+    background-color: rgb(123, 131, 131);
+    width: 150px;
+    height: 80px;
+    margin: 10px 10px;
+    border: 1px black solid;
+}
+
+.block-min {
+    background-color: rgb(123, 131, 131);
+    width: 150px;
+    height: 80px;
+    margin: 10px 10px;
+    border: 1px black solid;
+}
+
+.block-end {
+    margin-left: 10px;
+}
+
+.block-max {
+    height: 180px;
+}
+
+.block-hide {
+    margin: 0;
+    background: none;
+    border: none;
+    width: 172px;
+    height: 200px;
+}
+
+.central-container {
+    width: 344px;
+    margin: auto;
+}
