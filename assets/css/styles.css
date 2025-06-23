@@ -1,231 +1,25 @@
-/* Variables */
-:root {
-  --color-black: #000000;
-  --color-primary: #34547a;
-  --color-secondary: #727272;
-  --color-gray-light: #edeef0;
-  --color-white: #ffffff;
-
-  --font-family: 'Roboto', sans-serif;
-  --font-size: 16px;
-  --font-weight: 400;
-
-  --letter-spacing: 0.1em;
-
-  --line-height: 1.64;
-  --line-height-sm: 1.4;
-
-  --container-primary: 1110px;
-  --container-secondary: 540px;
-
-  --gap: 20px;
-  --gap-sm: calc(var(--gap) * 0.5); /* 10px */
-  --gap-lg: calc(var(--gap) * 1.5); /* 30px */
-  --gap-xl: calc(var(--gap) * 2); /* 40px */
-}
-
-/* Typography */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-html {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: var(--line-height-sm);
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: var(--line-height-sm);
-}
-
-a {
-  color: var(--color-black);
-  text-decoration: none;
-}
-
-/* Common Classes */
-.container {
-  width: min(100% - var(--gap-xl), var(--container-primary));
-  margin-inline: auto;
-}
-
-.container-sm {
-  width: min(100% - var(--gap-xl), var(--container-secondary));
-  margin-inline: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  visibility: hidden; /* Optional for fallback support */
-}
-
-/* Blocks */
-.header {
-  background-color: var(--color-gray-light);
-  padding-top: 69px;
-  padding-bottom: 140px;
-}
-
-.navbar {
-  margin-bottom: 141px;
-}
-
-.navbar__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 27px;
-  margin-left: -0.75em;
-}
-
-.navbar__link {
+svg {
   display: block;
-  letter-spacing: var(--letter-spacing);
-  padding: 0.5em 0.75em;
-  text-transform: uppercase;
-}
-.navbar__link--active {
-  color: var(--color-primary);
-  font-weight: 500;
-}
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: var(--container-secondary);
-}
-.hero__title {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-.hero__description {
-  margin-bottom: 57px;
-  color: var(--color-secondary);
-}
-.hero__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 225px;
-  min-height: 65px;
-  text-transform: uppercase;
-  padding: 0.5em;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  letter-spacing: var(--letter-spacing);
+  margin: 50px auto;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
 }
 
-.section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
+.figure {
+  stroke-width: 5px;
 }
 
-.section__title {
-  margin-bottom: 36px;
+.animate {
+  animation: colorChange 3s infinite alternate;
 }
 
-.section__description {
-  color: var(--color-secondary);
-}
-
-.about {
-  background-color: var(--color-white);
-}
-
-.experience {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.experience__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-
-.experience__item {
-  display: flex;
-  gap: var(--gap);
-}
-
-.experience__item-picture {
-  order: -1;
-}
-
-.experience__item-image {
-  display: block;
-}
-
-.experience__item-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  line-height: 1;
-}
-
-.experience__item-number {
-  font-size: 1.3125rem;
-  font-weight: 500;
-}
-
-.process {
-  background-color: var(--color-gray-light);
-  padding-bottom: 50px;
-}
-
-.video {
-  background-color: var(--color-gray-light);
-  padding-bottom: 100px;
-}
-
-.video__iframe {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  min-height: 200px;
-}
-
-.footer {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.footer__title {
-  font-size: 1.3125rem;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-.footer__description {
-  font-size: 0.8125rem;
+@keyframes colorChange {
+  0% {
+    stroke: #ff5733;
+    fill: #33c1ff;
+  }
+  100% {
+    stroke: #4caf50;
+    fill: #f1c40f;
+  }
 }
